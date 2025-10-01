@@ -25,10 +25,78 @@
                     </select>
                 </div>
             </div>
+            <div class="col-lg-6 col-md-12 offset-lg-3">
+                <div class="form-group">
+                    <label for="">Select City</label>
+                    <select class="form-select" id="country">
+                        <option selected disabled>Select...</option>
+                        <option>Karachi</option>
+                        <option>Lahore</option>
+                        <option>Islamabad</option>
+                        <option>Quetta</option>
+                        <option>Hyderabad</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script>
+        function SelectCountry()
+        {
+            var SelectCountry = document.getElementById("country").value;
+            var SelectCity = document.getElementById("city");
+            switch (SelectCountry) {
+                case "PAKISTAN":
+                SelectCity.innerHTML = `
+                <option selected disabled>Select...</option>
+                <option>Islamabad, Pakistan</option>
+                <option>Lahore, Pakistan</option>
+                <option>Karachi, Pakistan</option>
+                <option>Hyderabad, Pakistan</option>
+                <option>Quetta, Pakistan</option>
+                `;
+                break;
 
+                case "SAUDI ARABIA":
+                SelectCity.innerHTML = `
+                <option selected disabled>Select...</option>
+                <option>Riyadh, Saudi Arabia</option>
+                <option>Jeddah, Saudi Arabia</option>
+                <option>Mecca, Saudi Arabia</option>
+                <option>Medina, Saudi Arabia</option>
+                <option>Dammam, Saudi Arabia</option>
+                `;
+                break;
+
+                case "QATAR":
+                SelectCity.innerHTML = `
+                <option selected disabled>Select...</option>
+                <option>Doha, Qatar</option>
+                <option>Al Rayyan, Qatar</option>
+                <option>Umm Salal, Qatar</option>
+                <option>Al Wakrah, Qatar</option>
+                <option>Al Khor, Qatar</option>
+                `;
+                break;
+
+                case "U.A.E":
+                SelectCity.innerHTML = `
+                <option selected disabled>Select...</option>
+                <option>Dubai, U.A.E</option>
+                <option>Abu Dhabi, U.A.E</option>
+                <option>Sharjah, U.A.E</option>
+                <option>Ajman, U.A.E</option>
+                <option>Fujairah, U.A.E</option>
+                `;
+                break;
+
+                default:
+                alert("Please Select Country");
+                break;
+            }
+        }
+    </script>
    <script src="Assets/JS/lightbox-plus-jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
 </body>
